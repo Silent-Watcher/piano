@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import 'reset';
+.perfect-centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  @extend .perfect-centering;
+  min-height: 100vh;
+  background: #e3f2fd;
+}
+.wrapper {
+  width: 780px;
+  border-radius: 20px;
+  background-color: #141414;
+  padding: 35px 40px;
+  header {
+    @extend .perfect-centering;
+    justify-content: space-between;
+    color: #b2b2b2;
+    h2 {
+      font-size: 1.6rem;
+    }
+    .volume-slider {
+      > input {
+        accent-color: #fff;
+        outline: none;
+      }
+    }
+    .keys-checkbox {
+      > input {
+        width: 60px;
+        height: 30px;
+        background-color: #4b4b4b;
+        border-radius: 30px;
+        cursor: pointer;
+        appearance: none;
+        position: relative;
+        outline: none;
+        &:checked {
+          &::before {
+            left: 35px;
+            background: #fff;
+          }
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          background-color: #8c8c8c;
+          height: 20px;
+          width: 20px;
+          top: 50%;
+          left: 5px;
+          border-radius: inherit;
+          transform: translateY(-50%);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+    .column {
+      display: flex;
+      align-items: center;
+      > span {
+        font-weight: 500;
+        font-size: 1.19rem;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+.piano-keys {
+  display: flex;
+  margin-top: 40px;
+  .white {
+    width: 70px;
+    height: 230px;
+    background: linear-gradient(#fff 96%, #eee 4%);
+    border-radius: 8px;
+    border: 1px solid #000;
+    &:active{
+        background: linear-gradient(to bottom ,#fff 0%, #eee 100%);
+        box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+
+    }
+    
+  }
+  span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.13rem;
+    user-select: none;
+  }
+  .black {
+    width: 44px;
+    height: 140px;
+    margin: 0 -22px 0 -22px;
+    z-index: 2;
+    background: linear-gradient(#333 , #000);
+    border-radius: 0 0 5px 5px;
+    &:active{
+        background: linear-gradient(to bottom ,#000, #434343);
+        box-shadow: inset -5px 5px 10px rgba(255,255,255,0.1);
+
+    }
+  }
+  .key {
+    cursor: pointer;
+    position: relative;
+    color: #a2a2a2;
+    list-style: none;
+    text-transform: uppercase;
+  }
+}
