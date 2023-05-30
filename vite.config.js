@@ -4,11 +4,17 @@ export default defineConfig({
   base: '/piano/',
   plugins: [
     VitePWA({
+      registerType: 'autoUpdate',
+      injectRegister: 'auto',
+      // devOptions: {
+      //   enabled: true,
+      // },
       manifest: {
         name: 'Play Piano',
         short_name: 'Piano',
         description: 'a simple piano to play with',
         theme_color: '#202020',
+        orientation: 'any',
         icons: [
           {
             src: 'img/windows11/SmallTile.scale-100.png',
