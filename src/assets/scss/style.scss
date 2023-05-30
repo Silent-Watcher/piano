@@ -21,6 +21,7 @@ body {
     color: #b2b2b2;
     h2 {
       font-size: 1.6rem;
+      user-select: none;
     }
     .volume-slider {
       > input {
@@ -78,10 +79,9 @@ body {
     background: linear-gradient(#fff 96%, #eee 4%);
     border-radius: 8px;
     border: 1px solid #000;
-    &:active{
+    &.active{
         background: linear-gradient(to bottom ,#fff 0%, #eee 100%);
         box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
-
     }
     
   }
@@ -100,7 +100,7 @@ body {
     z-index: 2;
     background: linear-gradient(#333 , #000);
     border-radius: 0 0 5px 5px;
-    &:active{
+    &.active{
         background: linear-gradient(to bottom ,#000, #434343);
         box-shadow: inset -5px 5px 10px rgba(255,255,255,0.1);
 

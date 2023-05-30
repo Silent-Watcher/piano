@@ -1,8 +1,22 @@
 {
   "name": "piano",
+  "author": {
+    "name": "silent-watcher",
+    "email": "alitabatabaee20@gmail.com"
+  },
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "piano",
+    "interactive",
+    "entertainment",
+    "js project"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
