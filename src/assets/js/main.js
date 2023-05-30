@@ -1,6 +1,9 @@
 'use strict';
 const $$ = document;
 const pianoKeys = $$.querySelectorAll('.piano-keys .key');
+const volumeSlider = $$.querySelector('.volume-slider input[type=range]');
+const keysCheckBox = $$.querySelector('.keys-checkbox input');
+
 let audio = new Audio('audio/a.wav');
 const validKeys = [
   'a',
@@ -43,4 +46,14 @@ window.addEventListener('load', () => {
   $$.addEventListener('keydown', (event) => {
     playTune(event.key);
   });
+  volumeSlider.addEventListener('input',handleVolume)
+  keysCheckBox.addEventListener('click' , showHideKeys)
 });
+
+function handleVolume(event){
+    audio.volume = event.target.value
+}
+
+function showHideKeys(){
+    pianoKeys.forEach(key=> key.classList.toggle('hide'));
+}

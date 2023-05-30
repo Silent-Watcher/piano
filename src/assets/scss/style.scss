@@ -9,6 +9,7 @@ body {
   @extend .perfect-centering;
   min-height: 100vh;
   background: #e3f2fd;
+  padding: 0 10px;
 }
 .wrapper {
   width: 780px;
@@ -112,5 +113,10 @@ body {
     color: #a2a2a2;
     list-style: none;
     text-transform: uppercase;
+    &.hide{
+      span {
+        display: none;
+      }
+    }
   }
 }
