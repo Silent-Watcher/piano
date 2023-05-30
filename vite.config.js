@@ -9,9 +9,9 @@ export default defineConfig({
         enabled: true,
       },
       manifest: {
-        name: 'My Awesome App',
-        short_name: 'MyApp',
-        description: 'My Awesome App description',
+        name: 'Play Piano',
+        short_name: 'Piano',
+        description: 'a simple piano to play with',
         theme_color: '#202020',
         orientation:'any',
         icons: [
