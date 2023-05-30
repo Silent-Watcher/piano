@@ -27,7 +27,7 @@ const validKeys = [
 
 function playTune(key) {
   if (isCorrectKey(key)) {
-    let clickedKey = document.querySelector(`[data-key=${key}]`);
+    let clickedKey = document.querySelector(`[data-key="${key}"]`);
     audio.src = `audio/${key}.wav`;
     audio.play();
     clickedKey.classList.add('active');
