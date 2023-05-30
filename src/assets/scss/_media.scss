@@ -1,0 +1,42 @@
+@media screen and (max-width: 815px) {
+    .wrapper {
+      padding: 25px;
+    }
+    header {
+      flex-direction: column;
+    }
+    header:where(h2, .column) {
+      margin-bottom: 13px;
+    }
+    .volume-slider input {
+      min-width: 100px;
+    }
+    .piano-keys {
+      margin-top: 20px;
+    }
+    .piano-keys .key:where(:nth-child(9), :nth-child(10)) {
+      display: none;
+    }
+    .piano-keys .black {
+      height: 100px;
+      width: 40px;
+      margin: 0 -20px 0 -20px;
+    }
+    .piano-keys .white {
+      width: 60px;
+      height: 180px;
+    }
+  }
+  @media screen and (max-width: 615px) {
+    .piano-keys .key:nth-child(13),
+    .piano-keys .key:nth-child(14),
+    .piano-keys .key:nth-child(15),
+    .piano-keys .key:nth-child(16),
+    .piano-keys .key:nth-child(17) {
+      display: none !important;
+    }
+    .piano-keys .white {
+      width: 50px !important;
+    }
+  }
+  

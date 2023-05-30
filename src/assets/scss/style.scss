@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import 'reset';
+@import 'media';
+
 .perfect-centering {
   display: flex;
   justify-content: center;
@@ -74,17 +76,17 @@ body {
 .piano-keys {
   display: flex;
   margin-top: 40px;
+  justify-content: center;
   .white {
     width: 70px;
     height: 230px;
     background: linear-gradient(#fff 96%, #eee 4%);
     border-radius: 8px;
     border: 1px solid #000;
-    &.active{
-        background: linear-gradient(to bottom ,#fff 0%, #eee 100%);
-        box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+    &.active {
+      background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+      box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
     }
-    
   }
   span {
     position: absolute;
@@ -99,12 +101,11 @@ body {
     height: 140px;
     margin: 0 -22px 0 -22px;
     z-index: 2;
-    background: linear-gradient(#333 , #000);
+    background: linear-gradient(#333, #000);
     border-radius: 0 0 5px 5px;
-    &.active{
-        background: linear-gradient(to bottom ,#000, #434343);
-        box-shadow: inset -5px 5px 10px rgba(255,255,255,0.1);
-
+    &.active {
+      background: linear-gradient(to bottom, #000, #434343);
+      box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
     }
   }
   .key {
@@ -113,7 +114,7 @@ body {
     color: #a2a2a2;
     list-style: none;
     text-transform: uppercase;
-    &.hide{
+    &.hide {
       span {
         display: none;
       }
