@@ -1,16 +1,10 @@
 import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'vite';
 export default defineConfig({
-  base: '/piano/',
   plugins: [
     VitePWA({
-      registerType: 'autoUpdate',
-      injectRegister: 'auto',
-      // devOptions: {
-      //   enabled: true,
-      // },
       manifest: {
-        name: 'Play Piano',
+        name: 'Play_Piano',
         short_name: 'Piano',
         description: 'a simple piano to play with',
         theme_color: '#202020',
@@ -468,4 +462,5 @@ export default defineConfig({
       },
     }),
   ],
+  base: '/piano'
 });
