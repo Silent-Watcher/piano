@@ -9,6 +9,8 @@ export default defineConfig({
         description: 'a simple piano to play with',
         theme_color: '#202020',
         orientation: 'any',
+        display: 'standalone',
+        dir: 'rtl',
         icons: [
           {
             src: 'img/windows11/SmallTile.scale-100.png',
@@ -462,5 +464,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/piano'
+  base: '/piano',
 });
